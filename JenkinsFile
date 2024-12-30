@@ -32,7 +32,7 @@ pipeline {
                     sh """
                         terraform plan \
                         -var "aws_region=\${AWS_DEFAULT_REGION}" \
-                        -var "key_name=\${params.KEY_NAME}" \
+                        
                         -out=tfplan
                     """
                 }
