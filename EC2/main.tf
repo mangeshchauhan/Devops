@@ -26,7 +26,7 @@ resource "aws_instance" "public" {
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = var.instance_type
   subnet_id              = var.public_subnet_id
-  key_name              = element(var.key_name, 0)
+  key_name              = var.public_key_name
   vpc_security_group_ids = [aws_security_group.ec2.id]
 
   tags = {
@@ -38,7 +38,7 @@ resource "aws_instance" "private" {
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = var.instance_type
   subnet_id              = var.private_subnet_id
-  key_name              = element(var.key_name, 0+1)
+  key_name              = var.private_key_name
   vpc_security_group_ids = [aws_security_group.ec2.id]
 
   tags = {
