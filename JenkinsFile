@@ -30,9 +30,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                        terraform plan \
-                        -var "aws_region=\${AWS_DEFAULT_REGION}"
-                        -out=tfplan
+                        'terraform plan -var "aws_region=\${AWS_DEFAULT_REGION}"'
+                        'terraform plan -out=tfplan'
                     """
                 }
             }
