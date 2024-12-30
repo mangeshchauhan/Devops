@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "./VPC/"
+  source = "/VPC/"
   
   vpc_cidr             = var.vpc_cidr
   public_subnet_cidr   = var.public_subnet_cidr
@@ -21,7 +21,7 @@ module "vpc" {
 }
 
 module "ec2" {
-  source = "./EC2/"
+  source = "/EC2/"
   
   vpc_id              = module.vpc.vpc_id
   public_subnet_id    = module.vpc.public_subnet_id
