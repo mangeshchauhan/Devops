@@ -26,4 +26,5 @@ module "ec2" {
   public_subnet_id    = module.vpc.public_subnet_id
   private_subnet_id   = module.vpc.private_subnet_id
   instance_type       = var.instance_type
+  key_name = ""
 }

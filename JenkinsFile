@@ -51,16 +51,7 @@ pipeline {
                 }
             }
         }
-
-        stage('Approval') {
-            when {
-                branch 'main'
-            }
-            steps {
-                input message: 'Do you want to apply the changes?'
-            }
-        }
-
+        
         stage('Terraform Apply') {
             when {
                 branch 'main'
