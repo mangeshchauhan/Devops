@@ -18,8 +18,14 @@ variable "instance_type" {
   type        = string
 }
 
-variable "key_name" {
-  description = "Name of the SSH key pair"
-  type        = list(any)
-  default = [ "MyTest","MyTest2" ]
+variable "public_key_name" {
+  description = "Name of the SSH key pair for public instance"
+  type        = string
+  default     = "Test.pem"
+}
+
+variable "private_key_name" {
+  description = "Name of the SSH key pair for private instance"
+  type        = string
+  default     = "Test2.pem"
 }
