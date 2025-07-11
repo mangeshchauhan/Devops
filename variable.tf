@@ -25,6 +25,7 @@ variable "private_subnet_cidr" {
 variable "availability_zone" {
   description = "Availability zone"
   type        = string
+  default = "ap-south-1a"
 }
 
 variable "instance_type" {
