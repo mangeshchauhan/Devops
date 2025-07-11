@@ -25,7 +25,6 @@ variable "private_subnet_cidr" {
 variable "availability_zone" {
   description = "Availability zone"
   type        = list()
-  default     = [ap-south-1a, ap-south-1b, ap-south-1c]
 }
 
 variable "instance_type" {
